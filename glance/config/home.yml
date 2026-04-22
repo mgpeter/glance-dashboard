@@ -110,16 +110,14 @@
           markets:
             - symbol: SPY
               name: S&P 500
-            - symbol: FTSE
+            - symbol: ^FTSE
               name: FTSE 100
-            - symbol: VNGO
-              name: Vanguard Total Stock Market
-            - symbol: BTC-USD
-              name: Bitcoin
+            - symbol: V3AB.L
+              name: Vanguard Global All Cap
             - symbol: NVDA
               name: NVIDIA
-            - symbol: AAPL
-              name: Apple
             - symbol: MSFT
               name: Microsoft
+            - symbol: BTC-USD
+              name: Bitcoin
 
