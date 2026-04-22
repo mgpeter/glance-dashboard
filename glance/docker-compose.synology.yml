@@ -1,0 +1,11 @@
+services:
+  glance:
+    container_name: glance
+    image: mgpeter/glance-dashboard:latest
+    restart: unless-stopped
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    ports:
+      - 8080:8080
+    env_file: .env
