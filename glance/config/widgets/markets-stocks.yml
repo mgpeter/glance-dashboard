@@ -1,0 +1,30 @@
+type: markets
+title: Stocks
+sort-by: absolute-change
+markets:
+  - symbol: SPY
+    name: S&P 500
+  - symbol: ^FTSE
+    name: FTSE 100
+  - symbol: V3AB.L
+    name: Vanguard Global All Cap
+  - symbol: NVDA
+    name: NVIDIA
+  - symbol: AAPL
+    name: Apple
+  - symbol: MSFT
+    name: Microsoft
+  - symbol: GOOGL
+    name: Google
+  - symbol: AMD
+    name: AMD
+  - symbol: RDDT
+    name: Reddit
+  - symbol: AMZN
+    name: Amazon
+  - symbol: TSLA
+    name: Tesla
+  - symbol: INTC
+    name: Intel
+  - symbol: META
+    name: Meta

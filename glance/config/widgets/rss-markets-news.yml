@@ -1,0 +1,10 @@
+type: rss
+title: News
+style: horizontal-cards
+feeds:
+  - url: https://feeds.bloomberg.com/markets/news.rss
+    title: Bloomberg
+  - url: https://moxie.foxbusiness.com/google-publisher/markets.xml
+    title: Fox Business
+  - url: https://moxie.foxbusiness.com/google-publisher/technology.xml
+    title: Fox Business

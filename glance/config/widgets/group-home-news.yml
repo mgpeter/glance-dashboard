@@ -1,0 +1,19 @@
+type: group
+widgets:
+  - type: hacker-news
+  - type: reddit
+    subreddit: dotnet
+    show-thumbnails: true
+  - type: reddit
+    subreddit: programming
+    show-thumbnails: true
+  - type: reddit
+    subreddit: technology
+    show-thumbnails: true
+  - type: reddit
+    subreddit: selfhosted
+    show-thumbnails: true
+  - type: reddit
+    subreddit: eve
+    show-thumbnails: true
+  - type: lobsters

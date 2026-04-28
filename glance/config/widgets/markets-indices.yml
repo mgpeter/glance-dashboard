@@ -1,0 +1,7 @@
+type: markets
+title: Indices
+markets:
+  - symbol: SPY
+    name: S&P 500
+  - symbol: DX-Y.NYB
+    name: Dollar Index
