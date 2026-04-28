@@ -8,6 +8,7 @@ My personal setup for Glance. Decided to wrap my slightly customised Glance dash
 docker build -t glance-dashboard:local glance
 docker login
 docker tag glance-dashboard:local mgpeter/glance-dashboard:latest
+docker tag glance-dashboard:local mgpeter/glance-dashboard:1.0.2 # increment version as needed
 docker push --all-tags mgpeter/glance-dashboard
 ```
 
