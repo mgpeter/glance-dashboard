@@ -1,2 +1,2 @@
-type: calendar
-first-day-of-week: monday
+- type: calendar
+  first-day-of-week: monday

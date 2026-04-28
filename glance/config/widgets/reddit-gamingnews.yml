@@ -1,4 +1,4 @@
-type: reddit
-subreddit: gamingnews
-limit: 7
-style: vertical-cards
+- type: reddit
+  subreddit: gamingnews
+  limit: 7
+  style: vertical-cards

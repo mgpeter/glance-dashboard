@@ -4,9 +4,8 @@
   columns:
     - size: small
       widgets:
-        - $include: widgets/calendar.yml
-        - $include: widgets/weather-london.yml
         - $include: widgets/weather-forecast.yml
+        - $include: widgets/weather-london.yml
         - $include: widgets/rss-home.yml
 
     - size: full
@@ -17,6 +16,7 @@
 
     - size: small
       widgets:
+        - $include: widgets/calendar.yml      
         - $include: widgets/server-stats.yml
         - $include: widgets/docker-containers.yml
         - $include: widgets/monitor-home-sites.yml

@@ -1,7 +1,7 @@
-type: group
-widgets:
-  - type: reddit
-    show-thumbnails: true
-    subreddit: pcgaming
-  - type: reddit
-    subreddit: games
+- type: group
+  widgets:
+    - type: reddit
+      show-thumbnails: true
+      subreddit: pcgaming
+    - type: reddit
+      subreddit: games

@@ -1,6 +1,6 @@
-type: search
-search-engine: google
-bangs:
-  - title: YouTube
-    shortcut: "!yt"
-    url: https://www.youtube.com/results?search_query={QUERY}
+- type: search
+  search-engine: google
+  bangs:
+    - title: YouTube
+      shortcut: "!yt"
+      url: https://www.youtube.com/results?search_query={QUERY}

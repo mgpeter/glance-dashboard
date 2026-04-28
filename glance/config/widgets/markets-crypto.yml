@@ -1,7 +1,7 @@
-type: markets
-title: Crypto
-markets:
-  - symbol: BTC-USD
-    name: Bitcoin
-  - symbol: ETH-USD
-    name: Ethereum
+- type: markets
+  title: Crypto
+  markets:
+    - symbol: BTC-USD
+      name: Bitcoin
+    - symbol: ETH-USD
+      name: Ethereum

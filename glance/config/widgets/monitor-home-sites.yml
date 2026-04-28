@@ -1,8 +1,8 @@
-type: monitor
-cache: 1m
-title: Services
-sites:
-  - title: usualexpat.com
-    url: https://usualexpat.com
-  - title: shop.usualexpat.com
-    url: https://shop.usualexpat.com/
+- type: monitor
+  cache: 1m
+  title: Services
+  sites:
+    - title: usualexpat.com
+      url: https://usualexpat.com
+    - title: shop.usualexpat.com
+      url: https://shop.usualexpat.com/

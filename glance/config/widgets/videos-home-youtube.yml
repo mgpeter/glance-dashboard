@@ -1,20 +1,20 @@
-type: videos
-style: grid-cards
-collapse-after-rows: 2
-channels:
-  - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
-  - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
-  - UCsBjURrPoezykLs9EqgamOA # Fireship
-  - UCBJycsmduvYEL83R_U4JriQ # Marques Brownlee
-  - UCHnyfMqiRRG1u-2MsSQLbXA # Veritasium
-  - UCUdilFzFJKfzwKghoAWov_g # UsualExpat
-  - UCxn8csYeZg6awRnZS-aqg0g # Diablo
-  - UCvtT19MZW8dq5Wwfu6B0oxw # Dotnet
-  - UCwF3VyalTHzL0L-GDlwtbRw # EVE Online
-  - UC9N0DmacOi4iWKQyygX89OQ # Fighting Cowboy
-  - UCNvzD7Z-g64bPXxGzaQaa4g # gameranx
-  - UCxQKHvKbmSzGMvUrVtJYnUA # Learn Linux TV
-  - UCqVX2VLgAAK_aTrcAPaf6sw # markeedragon
-  - UCsMica-v34Irf9KVTh6xx-g # Microsoft Developer
-  - UChqrDOwARrxdJF-ykAptc7w # Visual Studio
-  - UCFig7skuwYrCIGy0tuZHA2Q # Sean Kochel
+- type: videos
+  style: grid-cards
+  collapse-after-rows: 2
+  channels:
+    - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
+    - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
+    - UCsBjURrPoezykLs9EqgamOA # Fireship
+    - UCBJycsmduvYEL83R_U4JriQ # Marques Brownlee
+    - UCHnyfMqiRRG1u-2MsSQLbXA # Veritasium
+    - UCUdilFzFJKfzwKghoAWov_g # UsualExpat
+    - UCxn8csYeZg6awRnZS-aqg0g # Diablo
+    - UCvtT19MZW8dq5Wwfu6B0oxw # Dotnet
+    - UCwF3VyalTHzL0L-GDlwtbRw # EVE Online
+    - UC9N0DmacOi4iWKQyygX89OQ # Fighting Cowboy
+    - UCNvzD7Z-g64bPXxGzaQaa4g # gameranx
+    - UCxQKHvKbmSzGMvUrVtJYnUA # Learn Linux TV
+    - UCqVX2VLgAAK_aTrcAPaf6sw # markeedragon
+    - UCsMica-v34Irf9KVTh6xx-g # Microsoft Developer
+    - UChqrDOwARrxdJF-ykAptc7w # Visual Studio
+    - UCFig7skuwYrCIGy0tuZHA2Q # Sean Kochel

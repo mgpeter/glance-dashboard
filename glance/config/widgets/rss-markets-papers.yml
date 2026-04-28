@@ -1,9 +1,9 @@
-type: rss
-title: News
-limit: 30
-collapse-after: 13
-feeds:
-  - url: https://www.ft.com/technology?format=rss
-    title: Financial Times
-  - url: https://feeds.a.dj.com/rss/RSSMarketsMain.xml
-    title: Wall Street Journal
+- type: rss
+  title: News
+  limit: 30
+  collapse-after: 13
+  feeds:
+    - url: https://www.ft.com/technology?format=rss
+      title: Financial Times
+    - url: https://feeds.a.dj.com/rss/RSSMarketsMain.xml
+      title: Wall Street Journal

@@ -1,4 +1,4 @@
-type: server-stats
-servers:
-  - type: local
-    name: Services
+- type: server-stats
+  servers:
+    - type: local
+      name: Services

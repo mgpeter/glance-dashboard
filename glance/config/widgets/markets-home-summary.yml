@@ -1,14 +1,14 @@
-type: markets
-markets:
-  - symbol: SPY
-    name: S&P 500
-  - symbol: ^FTSE
-    name: FTSE 100
-  - symbol: V3AB.L
-    name: Vanguard Global All Cap
-  - symbol: NVDA
-    name: NVIDIA
-  - symbol: MSFT
-    name: Microsoft
-  - symbol: BTC-USD
-    name: Bitcoin
+- type: markets
+  markets:
+    - symbol: SPY
+      name: S&P 500
+    - symbol: ^FTSE
+      name: FTSE 100
+    - symbol: V3AB.L
+      name: Vanguard Global All Cap
+    - symbol: NVDA
+      name: NVIDIA
+    - symbol: MSFT
+      name: Microsoft
+    - symbol: BTC-USD
+      name: Bitcoin

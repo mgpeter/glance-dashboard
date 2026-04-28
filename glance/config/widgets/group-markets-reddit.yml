@@ -1,8 +1,8 @@
-type: group
-widgets:
-  - type: reddit
-    show-thumbnails: true
-    subreddit: technology
-  - type: reddit
-    show-thumbnails: true
-    subreddit: wallstreetbets
+- type: group
+  widgets:
+    - type: reddit
+      show-thumbnails: true
+      subreddit: technology
+    - type: reddit
+      show-thumbnails: true
+      subreddit: wallstreetbets
