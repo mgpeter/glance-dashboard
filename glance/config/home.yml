@@ -4,8 +4,9 @@
   columns:
     - size: small
       widgets:
-        - $include: widgets/weather-forecast.yml
+        - $include: widgets/sunrise-sunset.yml
         - $include: widgets/weather-london.yml
+        - $include: widgets/weather-forecast.yml
         - $include: widgets/rss-home.yml
 
     - size: full
