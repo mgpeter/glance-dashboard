@@ -1,6 +1,5 @@
 - type: group
   widgets:
-    - type: hacker-news
     - type: reddit
       subreddit: dotnet
       show-thumbnails: true
