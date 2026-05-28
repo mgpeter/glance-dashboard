@@ -4,4 +4,11 @@
       show-thumbnails: true
       subreddit: pcgaming
     - type: reddit
+      show-thumbnails: true
       subreddit: games
+    - type: reddit
+      show-thumbnails: true
+      subreddit: diablo4
+    - type: reddit
+      show-thumbnails: true
+      subreddit: Eve

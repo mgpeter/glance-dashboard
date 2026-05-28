@@ -1,0 +1,11 @@
+- type: videos
+  style: grid-cards
+  collapse-after-rows: 2
+  channels:
+    - UCNvzD7Z-g64bPXxGzaQaa4g # gameranx
+    - UCZ7AeeVbyslLM_8-nVy2B8Q # Skill Up
+    - UC9PBzalIcEQCsiIkq36PyUA # Digital Foundry
+    - UCxn8csYeZg6awRnZS-aqg0g # Diablo
+    - UCwF3VyalTHzL0L-GDlwtbRw # EVE Online
+    - UC9N0DmacOi4iWKQyygX89OQ # Fighting Cowboy
+    - UCqVX2VLgAAK_aTrcAPaf6sw # markeedragon

@@ -1,9 +1,0 @@
-- type: twitch-top-games
-  limit: 20
-  collapse-after: 13
-  exclude:
-    - just-chatting
-    - pools-hot-tubs-and-beaches
-    - music
-    - art
-    - asmr

@@ -12,7 +12,5 @@
     - type: reddit
       subreddit: selfhosted
       show-thumbnails: true
-    - type: reddit
-      subreddit: eve
-      show-thumbnails: true
     - type: lobsters
+    - $include: rss-home.yml

@@ -5,10 +5,6 @@
   feeds:
     - url: https://xkcd.com/rss.xml
       title: XKCD
-    - url: https://universe.eveonline.com/feed/new-eden-news.rss
-      title: EVE Universe
-    - url: http://www.gameinformer.com/feeds/thefeedrss.aspx
-      title: Game Informer
     - url: http://blogs.msdn.com/webdevtools/rss.xml
       title: ASP.NET Web Tools Blog
     - url: https://devblogs.microsoft.com/feed/landingpage

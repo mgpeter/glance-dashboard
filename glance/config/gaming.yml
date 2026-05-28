@@ -2,22 +2,18 @@
   columns:
     - size: small
       widgets:
-        - $include: widgets/twitch-top-games.yml
+        - $include: widgets/steam-user.yml
         - $include: widgets/epic-games.yml
+        - $include: widgets/steam-specials.yml
 
     - size: full
       widgets:
         - $include: widgets/group-gaming-reddit.yml
-
-        # - type: videos
-        #   style: grid-cards
-        #   collapse-after-rows: 3
-        #   channels:
-        #     - UCNvzD7Z-g64bPXxGzaQaa4g # gameranx
-        #     - UCZ7AeeVbyslLM_8-nVy2B8Q # Skill Up
-        #     - UCHDxYLv8iovIbhrfl16CNyg # GameLinked
-        #     - UC9PBzalIcEQCsiIkq36PyUA # Digital Foundry
+        - $include: widgets/videos-gaming-youtube.yml
 
     - size: small
       widgets:
+        - $include: widgets/steam-top-sellers.yml
+        - $include: widgets/steam-recently-played.yml
+        - $include: widgets/rss-gaming.yml
         - $include: widgets/reddit-gamingnews.yml

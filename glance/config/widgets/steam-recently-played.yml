@@ -1,0 +1,43 @@
+- type: custom-api
+  title: Recently Played Games
+  cache: 1h
+  url: https://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=${STEAM_API_KEY}&steamid=${STEAM_USER}&format=json
+  template: |
+    <div>
+      {{ if eq .Response.StatusCode 200 }}
+        {{ $games := .JSON.Array "response.games" }}
+        {{ if gt (len $games) 0 }}
+          <ul class="list list-gap-10 collapsible-container" data-collapse-after="5">
+            {{ range $games }}
+              <li style="display: flex; align-items: center;">
+                <a href="https://store.steampowered.com/app/{{ .Int "appid" }}" target="_blank">
+                  <img
+                    src="https://media.steampowered.com/steamcommunity/public/images/apps/{{ .Int "appid" }}/{{ .String "img_icon_url" }}.jpg"
+                    alt="{{ .String "name" }}"
+                    style="width: 32px; border-radius: var(--border-radius); margin-right: 10px;">
+                </a>
+                <div>
+                  <a href="https://store.steampowered.com/app/{{ .Int "appid" }}"
+                     class="size-base color-primary" target="_blank">
+                    {{ .String "name" }}
+                  </a>
+                  <br>
+                  <span class="size-h5 color-subdue">
+                    Last 2 weeks:
+                    {{ if gt (toFloat (.Int "playtime_2weeks")) 60.0 }}
+                      {{ printf "%.2f hrs" (div (toFloat (.Int "playtime_2weeks")) 60.0) }}
+                    {{ else }}
+                      {{ .Int "playtime_2weeks" }} mins
+                    {{ end }}
+                  </span>
+                </div>
+              </li>
+            {{ end }}
+          </ul>
+        {{ else }}
+          <p class="color-subdue">No recently played games (set Steam "Game details" privacy to Public to enable this).</p>
+        {{ end }}
+      {{ else }}
+        <p class="color-negative">An unexpected error occurred. Please try again later.</p>
+      {{ end }}
+    </div>

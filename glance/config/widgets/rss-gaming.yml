@@ -1,0 +1,10 @@
+- type: rss
+  title: Gaming News
+  limit: 10
+  collapse-after: 5
+  cache: 6h
+  feeds:
+    - url: https://universe.eveonline.com/feed/new-eden-news.rss
+      title: EVE Universe
+    - url: http://www.gameinformer.com/feeds/thefeedrss.aspx
+      title: Game Informer
