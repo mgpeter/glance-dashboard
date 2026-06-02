@@ -77,8 +77,8 @@ fi
 
 printf '%s\n' "$new" > "$VERSION_FILE"
 
-echo "Building $LOCAL_TAG from $BUILD_CONTEXT ..."
-docker build -t "$LOCAL_TAG" "$BUILD_CONTEXT"
+echo "Building $LOCAL_TAG from $BUILD_CONTEXT (pulling latest base image) ..."
+docker build --pull -t "$LOCAL_TAG" "$BUILD_CONTEXT"
 
 echo "Tagging $IMAGE_NAME:latest and $IMAGE_NAME:$new ..."
 docker tag "$LOCAL_TAG" "$IMAGE_NAME:latest"

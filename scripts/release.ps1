@@ -53,8 +53,8 @@ if ($DryRun) {
 
 Set-Content -Path $versionFile -Value $new
 
-Write-Host "Building $localTag from $buildContext ..."
-& docker build -t $localTag $buildContext
+Write-Host "Building $localTag from $buildContext (pulling latest base image) ..."
+& docker build --pull -t $localTag $buildContext
 if ($LASTEXITCODE -ne 0) { throw 'docker build failed' }
 
 $latestRef = "${imageName}:latest"
