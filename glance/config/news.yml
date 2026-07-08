@@ -1,0 +1,13 @@
+- name: News
+  width: wide
+  columns:
+    - size: full
+      widgets:
+        - $include: widgets/rss-news-top.yml
+        - $include: widgets/rss-news-world.yml
+        - $include: widgets/rss-news-uk.yml
+        - $include: widgets/rss-news-business.yml
+        - $include: widgets/rss-news-tech.yml
+        - $include: widgets/rss-news-sport.yml
+        - $include: widgets/rss-news-entertainment.yml
+        - $include: widgets/rss-news-eu.yml

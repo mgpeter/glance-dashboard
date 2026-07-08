@@ -1,0 +1,11 @@
+- type: rss
+  title: Top Stories
+  style: horizontal-cards
+  css-class: news-cards
+  limit: 15
+  cache: 20m
+  feeds:
+    - url: https://feeds.bbci.co.uk/news/rss.xml
+      title: BBC News
+    - url: https://feeds.skynews.com/feeds/rss/home.xml
+      title: Sky News

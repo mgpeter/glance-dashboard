@@ -1,0 +1,11 @@
+- type: rss
+  title: Sport
+  style: horizontal-cards
+  css-class: news-cards
+  limit: 14
+  cache: 30m
+  feeds:
+    - url: https://feeds.bbci.co.uk/sport/rss.xml
+      title: BBC Sport
+    - url: https://feeds.skynews.com/feeds/rss/sports.xml
+      title: Sky Sports

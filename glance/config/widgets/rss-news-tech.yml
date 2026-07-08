@@ -1,0 +1,11 @@
+- type: rss
+  title: Technology
+  style: horizontal-cards
+  css-class: news-cards
+  limit: 14
+  cache: 30m
+  feeds:
+    - url: https://feeds.bbci.co.uk/news/technology/rss.xml
+      title: BBC News
+    - url: https://feeds.skynews.com/feeds/rss/technology.xml
+      title: Sky News

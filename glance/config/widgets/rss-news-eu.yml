@@ -1,0 +1,9 @@
+- type: rss
+  title: Europe
+  style: horizontal-cards
+  css-class: news-cards
+  limit: 14
+  cache: 30m
+  feeds:
+    - url: https://feeds.bbci.co.uk/news/world/europe/rss.xml
+      title: BBC News

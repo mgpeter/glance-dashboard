@@ -1,0 +1,13 @@
+/* News page: render RSS "horizontal-cards" rows as a wrapping multi-row grid
+   (MSN-style) instead of a single horizontally-scrolling strip.
+   Applied via `css-class: news-cards` on the RSS widgets in the News page. */
+.news-cards .cards-horizontal {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+    overflow: visible;
+    padding-bottom: 0;
+}
+
+.news-cards .cards-horizontal .card {
+    width: auto;
+}
