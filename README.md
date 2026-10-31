@@ -26,6 +26,10 @@ Version is tracked in [VERSION](./VERSION). The release scripts bump it, build t
 
 You must be logged into Docker Hub (`docker login`) before pushing. The scripts do not commit the bumped `VERSION` file — commit it manually after a successful release.
 
+## Glance version
+
+The base image is pinned to `glanceapp/glance:v0.8.7`. To upgrade, bump the tag in both `glance/dockerfile` and `glance/docker-compose.yml`, check the [release notes](https://github.com/glanceapp/glance/releases) for config changes, then release.
+
 ## Configuration
 
 Pages live in `glance/config/*.yml` and are wired together by `glance.yml` via `$include`. Each page's widgets are themselves extracted into `glance/config/widgets/`, one widget per file, and pulled in with `- $include: widgets/<name>.yml`. To add a widget to a page, drop a new YAML file into `widgets/` and add an `$include` entry to the relevant page.
