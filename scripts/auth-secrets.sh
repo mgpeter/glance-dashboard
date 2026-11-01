@@ -10,7 +10,7 @@ REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 GLANCE_DIR="$REPO_ROOT/glance"
 ENV_OUT="$GLANCE_DIR/asgard.env"
 LOCAL_ENV="$GLANCE_DIR/.env"
-MIN_PASSWORD_LENGTH=16
+MIN_PASSWORD_LENGTH=12
 
 write=0
 rotate_key=0

@@ -24,7 +24,7 @@ $repoRoot          = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $glanceDir         = Join-Path $repoRoot 'glance'
 $envOut            = Join-Path $glanceDir 'asgard.env'
 $localEnv          = Join-Path $glanceDir '.env'
-$minPasswordLength = 16
+$minPasswordLength = 12
 
 # Same Glance release as the image, so the hash format always matches.
 $image = Get-Content (Join-Path $glanceDir 'dockerfile') |
