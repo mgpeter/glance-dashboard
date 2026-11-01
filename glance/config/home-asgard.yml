@@ -1,0 +1,22 @@
+# home.yml without server-stats and docker-containers: on Asgard the first reports
+# on a host running other projects, and the second needs the Docker socket, which
+# is root on that host.
+- name: Home
+  columns:
+    - size: small
+      widgets:
+        - $include: widgets/sunrise-sunset.yml
+        - $include: widgets/weather-london.yml
+        - $include: widgets/weather-forecast.yml
+
+    - size: full
+      widgets:
+        - $include: widgets/search-google.yml
+        - $include: widgets/group-home-news.yml
+        - $include: widgets/videos-home-youtube.yml
+
+    - size: small
+      widgets:
+        - $include: widgets/calendar.yml
+        - $include: widgets/monitor-home-sites.yml
+        - $include: widgets/markets-home-summary.yml

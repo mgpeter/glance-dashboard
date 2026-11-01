@@ -1,0 +1,41 @@
+# Asgard deployment, synced by Arcane as a GitOps project. Follows the host's
+# tenant contract: https://github.com/mgpeter/usualexpat-infra/blob/main/docs/tenant-contract.md
+#
+# Differs from docker-compose.yml and docker-compose.synology.yml on purpose:
+# no ports (Caddy is the only listener on the host), no docker.sock (root on a
+# host shared with other projects), and a login via glance-asgard.yml.
+#
+# Variables go in the Arcane project's Configuration tab. Single-quote the two
+# GLANCE_* values there - the hash starts with $2a$ and Compose would otherwise
+# try to interpolate it. scripts/auth-secrets.sh prints them ready to paste.
+name: glance
+
+services:
+  glance:
+    image: mgpeter/glance-dashboard:${GLANCE_TAG:-latest}
+    restart: unless-stopped
+    entrypoint: ["/app/glance", "--config", "/app/config/glance-asgard.yml"]
+    environment:
+      STEAM_API_KEY: ${STEAM_API_KEY:?set STEAM_API_KEY}
+      STEAM_USER: ${STEAM_USER:?set STEAM_USER}
+      WEATHER_LOCATION: ${WEATHER_LOCATION:-London}
+      GLANCE_SECRET_KEY: ${GLANCE_SECRET_KEY:?run scripts/auth-secrets.sh}
+      GLANCE_PASSWORD_HASH: ${GLANCE_PASSWORD_HASH:?run scripts/auth-secrets.sh}
+    expose:
+      - "8080"
+    networks:
+      edge:
+        aliases: [glance-web]
+    labels:
+      - com.centurylinklabs.watchtower.enable=true
+    healthcheck:
+      # /api/healthz is outside the login, so this works with auth on.
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://localhost:8080/api/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+networks:
+  edge:
+    external: true

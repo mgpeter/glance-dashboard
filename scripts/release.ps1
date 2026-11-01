@@ -57,6 +57,17 @@ Write-Host "Building $localTag from $buildContext (pulling latest base image) ..
 & docker build --pull -t $localTag $buildContext
 if ($LASTEXITCODE -ne 0) { throw 'docker build failed' }
 
+# Both entry configs ship in the image. A broken glance-asgard.yml would otherwise
+# first show up when Watchtower recreates the container on Asgard. The values are
+# placeholders: validate only needs every referenced variable to exist.
+$validateEnv = 'STEAM_API_KEY=x', 'STEAM_USER=x', 'WEATHER_LOCATION=x', 'GLANCE_SECRET_KEY=x', 'GLANCE_PASSWORD_HASH=x' |
+    ForEach-Object { '-e', $_ }
+foreach ($config in 'glance.yml', 'glance-asgard.yml') {
+    Write-Host "Validating $config ..."
+    & docker run --rm @validateEnv --entrypoint /app/glance $localTag --config "/app/config/$config" config:validate
+    if ($LASTEXITCODE -ne 0) { throw "$config failed validation" }
+}
+
 $latestRef = "${imageName}:latest"
 $versionRef = "${imageName}:${new}"
 

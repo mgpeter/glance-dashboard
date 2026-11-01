@@ -80,6 +80,17 @@ printf '%s\n' "$new" > "$VERSION_FILE"
 echo "Building $LOCAL_TAG from $BUILD_CONTEXT (pulling latest base image) ..."
 docker build --pull -t "$LOCAL_TAG" "$BUILD_CONTEXT"
 
+# Both entry configs ship in the image. A broken glance-asgard.yml would otherwise
+# first show up when Watchtower recreates the container on Asgard. The values are
+# placeholders: validate only needs every referenced variable to exist.
+for config in glance.yml glance-asgard.yml; do
+  echo "Validating $config ..."
+  MSYS_NO_PATHCONV=1 docker run --rm \
+    -e STEAM_API_KEY=x -e STEAM_USER=x -e WEATHER_LOCATION=x \
+    -e GLANCE_SECRET_KEY=x -e GLANCE_PASSWORD_HASH=x \
+    --entrypoint /app/glance "$LOCAL_TAG" --config "/app/config/$config" config:validate
+done
+
 echo "Tagging $IMAGE_NAME:latest and $IMAGE_NAME:$new ..."
 docker tag "$LOCAL_TAG" "$IMAGE_NAME:latest"
 docker tag "$LOCAL_TAG" "$IMAGE_NAME:$new"

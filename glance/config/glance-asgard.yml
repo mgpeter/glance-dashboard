@@ -1,0 +1,26 @@
+# Entry config for the Asgard deployment, selected by the entrypoint override in
+# docker-compose.asgard.yml. The Synology copy keeps using glance.yml, with no login.
+#
+# Both auth values come from the environment because this file is baked into a
+# public image: a secret key in here would let anyone forge a session.
+# Generate them with scripts/auth-secrets.sh.
+server:
+  assets-path: /app/assets
+  # Behind Caddy. Without this every client shares Caddy's IP, so five failed
+  # logins from anyone would lock everyone out.
+  proxied: true
+
+auth:
+  secret-key: ${GLANCE_SECRET_KEY}
+  users:
+    piotr:
+      password-hash: ${GLANCE_PASSWORD_HASH}
+
+theme:
+  $include: theme.yml
+
+pages:
+  - $include: home-asgard.yml
+  - $include: news.yml
+  - $include: gaming.yml
+  - $include: markets.yml
