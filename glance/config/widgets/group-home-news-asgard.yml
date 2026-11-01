@@ -1,0 +1,16 @@
+# Asgard copy of group-home-news.yml. Reddit 403s the reddit widget from Azure
+# addresses, and rate-limits RSS (429) when Glance fetches one feed per subreddit
+# at once, so the four subreddits are one combined feed. The Synology keeps the
+# original.
+- type: group
+  widgets:
+    - type: rss
+      title: Reddit
+      title-url: https://www.reddit.com/r/dotnet+programming+technology+selfhosted/
+      limit: 20
+      collapse-after: 5
+      cache: 1h
+      feeds:
+        - url: https://www.reddit.com/r/dotnet+programming+technology+selfhosted/.rss
+    - type: lobsters
+    - $include: rss-home.yml

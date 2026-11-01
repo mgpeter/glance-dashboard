@@ -1,0 +1,19 @@
+# Asgard stand-in for group-markets-reddit.yml. Reddit rate-limits RSS to about one
+# request at a time, and Home already uses it, so these tabs come from elsewhere.
+- type: group
+  widgets:
+    - type: hacker-news
+    - type: rss
+      title: Ars Technica
+      limit: 15
+      collapse-after: 5
+      cache: 1h
+      feeds:
+        - url: https://feeds.arstechnica.com/arstechnica/technology-lab
+    - type: rss
+      title: FT Markets
+      limit: 15
+      collapse-after: 5
+      cache: 1h
+      feeds:
+        - url: https://www.ft.com/markets?format=rss

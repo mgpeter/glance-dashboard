@@ -12,7 +12,7 @@
     - size: full
       widgets:
         - $include: widgets/search-google.yml
-        - $include: widgets/group-home-news.yml
+        - $include: widgets/group-home-news-asgard.yml
         - $include: widgets/videos-home-youtube.yml
 
     - size: small

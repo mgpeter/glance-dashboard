@@ -1,0 +1,25 @@
+# Asgard stand-in for group-gaming-reddit.yml. Reddit rate-limits RSS to about one
+# request at a time, and Home already uses it, so the gaming tabs are news sites.
+- type: group
+  widgets:
+    - type: rss
+      title: PC Gamer
+      limit: 15
+      collapse-after: 5
+      cache: 1h
+      feeds:
+        - url: https://www.pcgamer.com/rss/
+    - type: rss
+      title: Rock Paper Shotgun
+      limit: 15
+      collapse-after: 5
+      cache: 1h
+      feeds:
+        - url: https://www.rockpapershotgun.com/feed
+    - type: rss
+      title: Eurogamer
+      limit: 15
+      collapse-after: 5
+      cache: 1h
+      feeds:
+        - url: https://www.eurogamer.net/feed

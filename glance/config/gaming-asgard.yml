@@ -1,0 +1,20 @@
+# gaming.yml with the Reddit widgets replaced (see widgets/*-asgard.yml).
+- name: Gaming
+  columns:
+    - size: small
+      widgets:
+        - $include: widgets/steam-user.yml
+        - $include: widgets/epic-games.yml
+        - $include: widgets/steam-specials.yml
+
+    - size: full
+      widgets:
+        - $include: widgets/group-gaming-news-asgard.yml
+        - $include: widgets/videos-gaming-youtube.yml
+
+    - size: small
+      widgets:
+        - $include: widgets/steam-top-sellers.yml
+        - $include: widgets/steam-recently-played.yml
+        - $include: widgets/rss-gaming.yml
+        - $include: widgets/rss-gamingnews-asgard.yml

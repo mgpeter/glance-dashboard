@@ -1,0 +1,9 @@
+# Asgard stand-in for reddit-gamingnews.yml (see group-gaming-news-asgard.yml).
+- type: rss
+  title: VGC
+  title-url: https://www.videogameschronicle.com/
+  limit: 7
+  style: detailed-list
+  cache: 1h
+  feeds:
+    - url: https://www.videogameschronicle.com/feed/

@@ -22,5 +22,5 @@ theme:
 pages:
   - $include: home-asgard.yml
   - $include: news.yml
-  - $include: gaming.yml
-  - $include: markets.yml
+  - $include: gaming-asgard.yml
+  - $include: markets-asgard.yml
